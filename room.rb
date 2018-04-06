@@ -19,5 +19,11 @@ class Room
   def remove_song(song)
     @stero.delete(song)
   end
+  def is_full
+    if @guests.length <= 4
+    return true
+  else return false
+  end
+  end
 
 end

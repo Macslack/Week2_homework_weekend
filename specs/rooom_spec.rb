@@ -1,4 +1,6 @@
 require("minitest/autorun")
+require("minitest/rg")
+require("pry")
 require_relative("../room.rb")
 require_relative("../guest.rb")
 require_relative("../song.rb")
@@ -42,7 +44,17 @@ class RoomTest < MiniTest::Test
   def test_remove_song
     @room.add_song(@song1)
     @room.remove_song(@song1)
-  assert_equal(0, @room.stero.length)
-
+    assert_equal(0, @room.stero.length)
+  end
+  def test_is_full_not_full__returns_true
+    assert_equal(true, @room.is_full)
+  end
+  def test_is_full_full__returns_false
+    @room.add_guest(@guest1)
+    @room.add_guest(@guest3)
+    @room.add_guest(@guest2)
+    @room.add_guest(@guest2)
+    @room.add_guest(@guest2)
+    assert_equal(false, @room.is_full)
   end
 end
