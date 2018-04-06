@@ -1,3 +1,4 @@
+require("Pry")
 class Room
   attr_reader :name, :guests, :stero
   def initialize(name)
@@ -13,7 +14,10 @@ class Room
     @guests.delete(guest)
   end
   def add_song(song)
-    @song.push(song)
+    @stero.push(song)
   end
-  
+  def remove_song(song)
+    @stero.delete(song)
+  end
+
 end

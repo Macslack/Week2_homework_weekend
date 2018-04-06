@@ -37,6 +37,12 @@ class RoomTest < MiniTest::Test
   end
   def test_can_add_song
     @room.add_song(@song1)
-    assert_equal(1, @room.song.length)
+    assert_equal(1, @room.stero.length)
+  end
+  def test_remove_song
+    @room.add_song(@song1)
+    @room.remove_song(@song1)
+  assert_equal(0, @room.stero.length)
+
   end
 end
