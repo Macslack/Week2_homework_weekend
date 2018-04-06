@@ -3,4 +3,7 @@ class Song
   def initialize(name)
     @name = name
   end
+  def make_noise()
+    "Shoop de whoop"
+  end
 end

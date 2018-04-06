@@ -57,4 +57,5 @@ class RoomTest < MiniTest::Test
     @room.add_guest(@guest2)
     assert_equal(false, @room.is_full)
   end
+
 end

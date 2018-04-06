@@ -8,6 +8,7 @@ class Room
 
   end
   def add_guest(guest)
+    # if @guests == true
     @guests.push(guest)
   end
   def remove_guest(guest)
@@ -21,9 +22,9 @@ class Room
   end
   def is_full
     if @guests.length <= 4
-    return true
-  else return false
-  end
+      return true
+    else return false 
+    end
   end
 
 end

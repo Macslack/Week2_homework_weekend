@@ -12,4 +12,8 @@ class SongTest < MiniTest::Test
     assert_equal("Bad moon rising", @song.name())
   end
 
+  def test_song_make_noise
+    assert_equal("Shoop de whoop", @song.make_noise)
+  end
+
 end
