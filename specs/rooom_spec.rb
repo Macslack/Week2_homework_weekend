@@ -57,5 +57,10 @@ class RoomTest < MiniTest::Test
     @room.add_guest(@guest2)
     assert_equal(false, @room.is_full)
   end
+  def test_guest_enter__yes
+      @room.guest_enter
+      assert_equal(1, @room.guests.length )
+  end
+
 
 end
