@@ -27,8 +27,8 @@ class Room
   end
   def guest_enter
 
-  if  is_full == true
-    # binding.pry
+    if  is_full == true
+      # binding.pry
       return add_guest(@guest)
     else
       "Too many people in this room"

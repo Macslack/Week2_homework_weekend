@@ -9,9 +9,9 @@ class RoomTest < MiniTest::Test
 
   def setup
     @song1 = Song.new("Bad moon rising")
-    @guest1 = Guest.new("Bob")
-    @guest2 = Guest.new("Bill")
-    @guest3 = Guest.new("Rob")
+    @guest1 = Guest.new("Bob", 10.0)
+    @guest2 = Guest.new("Bill", 30.0)
+    @guest3 = Guest.new("Rob",19.0)
     # guests = [@guest1, @guest2, @guest3]
     # stero = [@song1]
     @room = Room.new("Party")
