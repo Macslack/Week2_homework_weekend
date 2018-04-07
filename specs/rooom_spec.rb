@@ -61,6 +61,15 @@ class RoomTest < MiniTest::Test
       @room.guest_enter
       assert_equal(1, @room.guests.length )
   end
+  def test_guest_enter__no_return__string
+    @room.add_guest(@guest1)
+    @room.add_guest(@guest3)
+    @room.add_guest(@guest2)
+    @room.add_guest(@guest2)
+    @room.add_guest(@guest2)
+    assert_equal("Too many people in this room", @room.guest_enter )
+
+  end
 
 
 end
